@@ -20,7 +20,7 @@ Routes return HTML for browser navigation or JSON for `Accept: application/json`
 
 - `/` and `/status`: baked source revision, `UAT_RELEASE` (default `env-v1`),
   identity-present boolean, and synthetic secret presence/equality booleans.
-- `/probe`: exactly one GET to `https://example.com/`, a three-second abort,
+- `/probe`: exactly one GET to `https://example.com/`, a ten-second abort,
   no redirect following, no request-header forwarding, no arbitrary URL inputs.
   Returns only reachability, HTTP status and a generic outcome. One in-flight
   probe per process is permitted. Other requests trigger no outbound activity.

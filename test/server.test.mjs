@@ -87,7 +87,7 @@ test('probe makes one bounded fixed HTTPS request, without forwarding headers', 
   const response = await call(handler, { url: '/probe' });
   assert.equal(count, 1);
   assert(cancelled);
-  assert.equal(PROBE_TIMEOUT_MS, 3000);
+  assert.equal(PROBE_TIMEOUT_MS, 10000);
   assert.deepEqual(response.data.probe, { target: 'example.com:443', reachable: true, httpStatus: 200, outcome: 'success' });
 });
 

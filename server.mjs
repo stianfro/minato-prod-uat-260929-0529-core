@@ -4,7 +4,7 @@ import { pathToFileURL } from 'node:url';
 
 export const SOURCE_REVISION = 'source-v2';
 export const PROBE_URL = 'https://example.com/';
-export const PROBE_TIMEOUT_MS = 3000;
+export const PROBE_TIMEOUT_MS = 10000;
 export const CANARY_LINES = Object.freeze([
   'uat-260929-core-log-marker',
   'Authorization: Bearer uat-260929-fixed-synthetic-auth',
