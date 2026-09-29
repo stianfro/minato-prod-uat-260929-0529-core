@@ -1,7 +1,7 @@
 # Production UAT core fixture
 
 A dependency-free, synthetic Node.js web app. The source marker is baked as
-`source-v1`. It listens on `PORT` (default 8080) and binds `0.0.0.0`.
+`source-v2`. It listens on `PORT` (default 8080) and binds `0.0.0.0`.
 The package selects Node 22.x, supported by the documented Node builder.
 
 ## Local checks

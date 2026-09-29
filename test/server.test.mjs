@@ -18,7 +18,7 @@ async function call(handler, { url = '/', method = 'GET', headers = auth } = {})
 test('default runtime status is useful, secret-free, and source baked', async () => {
   const response = await call(createHandler({ env: {} }));
   assert.equal(response.status, 200);
-  assert.deepEqual(response.data, { fixture: 'production-uat-core', sourceRevision: 'source-v1', release: 'env-v1', identityPresent: true, cliSecret: { present: false, matchesExpected: false }, uiSecret: { present: false, matchesExpected: false } });
+  assert.deepEqual(response.data, { fixture: 'production-uat-core', sourceRevision: 'source-v2', release: 'env-v1', identityPresent: true, cliSecret: { present: false, matchesExpected: false }, uiSecret: { present: false, matchesExpected: false } });
   assert.equal(response.headers['cache-control'], 'no-store');
   assert(!response.body.includes(auth['x-auth-oid']));
 });
@@ -47,7 +47,7 @@ test('HTML renders safe status for normal browser navigation', async () => {
   const response = await call(createHandler({ env: {} }), { headers: { 'x-auth-subject': 'synthetic-fallback' } });
   assert.equal(response.status, 200);
   assert.match(response.headers['content-type'], /text\/html/);
-  assert.match(response.body, /source-v1/);
+  assert.match(response.body, /source-v2/);
   assert.match(response.body, /id="result"/);
   assert(!response.body.includes('synthetic-fallback'));
 });

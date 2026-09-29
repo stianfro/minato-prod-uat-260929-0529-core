@@ -2,7 +2,7 @@ import { createHash, timingSafeEqual } from 'node:crypto';
 import { createServer } from 'node:http';
 import { pathToFileURL } from 'node:url';
 
-export const SOURCE_REVISION = 'source-v1';
+export const SOURCE_REVISION = 'source-v2';
 export const PROBE_URL = 'https://example.com/';
 export const PROBE_TIMEOUT_MS = 3000;
 export const CANARY_LINES = Object.freeze([
